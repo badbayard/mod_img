@@ -68,6 +68,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Liste&#160;des&#160;classes</span></a></li>
       <li><a href="classes.html"><span>Index&#160;des&#160;classes</span></a></li>
+      <li><a href="functions.html"><span>Membres&#160;de&#160;classe</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -90,7 +91,7 @@ $(document).ready(function(){initNavTree('classPixel.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fonctions</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -107,20 +108,20 @@ $(document).ready(function(){initNavTree('classPixel.html','');});
 
 <p>Liste complète des membres de <a class="el" href="classPixel.html">Pixel</a>, y compris les membres hérités :</p>
 <table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>getBleu</b>() const  (défini dans <a class="el" href="classPixel.html">Pixel</a>)</td><td class="entry"><a class="el" href="classPixel.html">Pixel</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>getRouge</b>() const  (défini dans <a class="el" href="classPixel.html">Pixel</a>)</td><td class="entry"><a class="el" href="classPixel.html">Pixel</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>getVert</b>() const  (défini dans <a class="el" href="classPixel.html">Pixel</a>)</td><td class="entry"><a class="el" href="classPixel.html">Pixel</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>Pixel</b>() (défini dans <a class="el" href="classPixel.html">Pixel</a>)</td><td class="entry"><a class="el" href="classPixel.html">Pixel</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>Pixel</b>(unsigned char nr, unsigned char nv, unsigned char nb) (défini dans <a class="el" href="classPixel.html">Pixel</a>)</td><td class="entry"><a class="el" href="classPixel.html">Pixel</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>setBleu</b>(unsigned char nb) (défini dans <a class="el" href="classPixel.html">Pixel</a>)</td><td class="entry"><a class="el" href="classPixel.html">Pixel</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>setRouge</b>(unsigned char nr) (défini dans <a class="el" href="classPixel.html">Pixel</a>)</td><td class="entry"><a class="el" href="classPixel.html">Pixel</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>setVert</b>(unsigned char nv) (défini dans <a class="el" href="classPixel.html">Pixel</a>)</td><td class="entry"><a class="el" href="classPixel.html">Pixel</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classPixel.html#a697482715837ed7a703e5ad955206d32">getBleu</a>() const </td><td class="entry"><a class="el" href="classPixel.html">Pixel</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classPixel.html#a825a1e606a746602c4d309eb20e4e948">getRouge</a>() const </td><td class="entry"><a class="el" href="classPixel.html">Pixel</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classPixel.html#a7f994177826a3b7543a0580bd7a0bf36">getVert</a>() const </td><td class="entry"><a class="el" href="classPixel.html">Pixel</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classPixel.html#a27ad99a2f705e635c42d242d530d4756">Pixel</a>()</td><td class="entry"><a class="el" href="classPixel.html">Pixel</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classPixel.html#ace5edd6e67598456f1e067e56bc52cff">Pixel</a>(unsigned char nr, unsigned char nv, unsigned char nb)</td><td class="entry"><a class="el" href="classPixel.html">Pixel</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classPixel.html#a706ee4cd16d1098fab21c727c90cb00b">setBleu</a>(unsigned char nb)</td><td class="entry"><a class="el" href="classPixel.html">Pixel</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classPixel.html#a46ffac40207a65c1481afcb2b156e433">setRouge</a>(unsigned char nr)</td><td class="entry"><a class="el" href="classPixel.html">Pixel</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classPixel.html#a3678479783c7c839ee653be96a7e0757">setVert</a>(unsigned char nv)</td><td class="entry"><a class="el" href="classPixel.html">Pixel</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Généré le Jeudi 9 Février 2017 15:00:20 pour My Project par
+    <li class="footer">Généré le Jeudi 16 Février 2017 13:35:08 pour My Project par
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

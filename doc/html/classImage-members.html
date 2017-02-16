@@ -68,6 +68,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Liste&#160;des&#160;classes</span></a></li>
       <li><a href="classes.html"><span>Index&#160;des&#160;classes</span></a></li>
+      <li><a href="functions.html"><span>Membres&#160;de&#160;classe</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -90,7 +91,7 @@ $(document).ready(function(){initNavTree('classImage.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fonctions</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -107,23 +108,24 @@ $(document).ready(function(){initNavTree('classImage.html','');});
 
 <p>Liste complète des membres de <a class="el" href="classImage.html">Image</a>, y compris les membres hérités :</p>
 <table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>afficherConsole</b>() (défini dans <a class="el" href="classImage.html">Image</a>)</td><td class="entry"><a class="el" href="classImage.html">Image</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>dessinerRectangle</b>(unsigned int xmin, unsigned int ymin, unsigned int xmax, unsigned int ymax, Pixel couleur) (défini dans <a class="el" href="classImage.html">Image</a>)</td><td class="entry"><a class="el" href="classImage.html">Image</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>effacer</b>(const Pixel &amp;couleur) (défini dans <a class="el" href="classImage.html">Image</a>)</td><td class="entry"><a class="el" href="classImage.html">Image</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>getPix</b>(unsigned int x, unsigned int y) const  (défini dans <a class="el" href="classImage.html">Image</a>)</td><td class="entry"><a class="el" href="classImage.html">Image</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>Image</b>() (défini dans <a class="el" href="classImage.html">Image</a>)</td><td class="entry"><a class="el" href="classImage.html">Image</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>Image</b>(unsigned int dimensionX, unsigned int dimensionY) (défini dans <a class="el" href="classImage.html">Image</a>)</td><td class="entry"><a class="el" href="classImage.html">Image</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>ouvrir</b>(const string &amp;filename) (défini dans <a class="el" href="classImage.html">Image</a>)</td><td class="entry"><a class="el" href="classImage.html">Image</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>sauver</b>(const string &amp;filename) const  (défini dans <a class="el" href="classImage.html">Image</a>)</td><td class="entry"><a class="el" href="classImage.html">Image</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>setPix</b>(unsigned int x, unsigned int y, Pixel couleur) (défini dans <a class="el" href="classImage.html">Image</a>)</td><td class="entry"><a class="el" href="classImage.html">Image</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>testRegression</b>() (défini dans <a class="el" href="classImage.html">Image</a>)</td><td class="entry"><a class="el" href="classImage.html">Image</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>~Image</b>() (défini dans <a class="el" href="classImage.html">Image</a>)</td><td class="entry"><a class="el" href="classImage.html">Image</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>afficher</b>() (défini dans <a class="el" href="classImage.html">Image</a>)</td><td class="entry"><a class="el" href="classImage.html">Image</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>afficherConsole</b>() (défini dans <a class="el" href="classImage.html">Image</a>)</td><td class="entry"><a class="el" href="classImage.html">Image</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classImage.html#a1aaaebd3616f1d2a89b4406afacc5d51">dessinerRectangle</a>(unsigned int xmin, unsigned int ymin, unsigned int xmax, unsigned int ymax, Pixel couleur)</td><td class="entry"><a class="el" href="classImage.html">Image</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classImage.html#a62d0c277a049c0ea1da7ba2dd2131c31">effacer</a>(const Pixel &amp;couleur)</td><td class="entry"><a class="el" href="classImage.html">Image</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classImage.html#a4e179663bdf144e852e4b116f1267df1">getPix</a>(unsigned int x, unsigned int y) const </td><td class="entry"><a class="el" href="classImage.html">Image</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classImage.html#a58edd1c45b4faeb5f789b0d036d02313">Image</a>()</td><td class="entry"><a class="el" href="classImage.html">Image</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classImage.html#a781829417e05ac62d5c1ea090a8844d1">Image</a>(unsigned int dimensionX, unsigned int dimensionY)</td><td class="entry"><a class="el" href="classImage.html">Image</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>ouvrir</b>(const string &amp;filename) (défini dans <a class="el" href="classImage.html">Image</a>)</td><td class="entry"><a class="el" href="classImage.html">Image</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classImage.html#af60f90badc8cc9ea2491e84ff8e219d7">sauver</a>(const string &amp;filename) const </td><td class="entry"><a class="el" href="classImage.html">Image</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classImage.html#ac52714350239da897272c87ce6f794ca">setPix</a>(unsigned int x, unsigned int y, Pixel couleur)</td><td class="entry"><a class="el" href="classImage.html">Image</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classImage.html#a82ffef6c89927b0cc755a3fe2fec637b">testRegression</a>()</td><td class="entry"><a class="el" href="classImage.html">Image</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classImage.html#a0294f63700543e11c0f0da85601c7ae5">~Image</a>()</td><td class="entry"><a class="el" href="classImage.html">Image</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Généré le Jeudi 9 Février 2017 15:00:20 pour My Project par
+    <li class="footer">Généré le Jeudi 16 Février 2017 13:35:08 pour My Project par
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

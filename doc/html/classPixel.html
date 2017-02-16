@@ -68,6 +68,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Liste&#160;des&#160;classes</span></a></li>
       <li><a href="classes.html"><span>Index&#160;des&#160;classes</span></a></li>
+      <li><a href="functions.html"><span>Membres&#160;de&#160;classe</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -90,7 +91,7 @@ $(document).ready(function(){initNavTree('classPixel.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fonctions</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -110,28 +111,57 @@ $(document).ready(function(){initNavTree('classPixel.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
+<tr class="memitem:a27ad99a2f705e635c42d242d530d4756"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPixel.html#a27ad99a2f705e635c42d242d530d4756">Pixel</a> ()</td></tr>
+<tr class="memdesc:a27ad99a2f705e635c42d242d530d4756"><td class="mdescLeft">&#160;</td><td class="mdescRight">variables de pixel usigned char pour être compris entre 0 et 255  <a href="#a27ad99a2f705e635c42d242d530d4756">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a27ad99a2f705e635c42d242d530d4756"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace5edd6e67598456f1e067e56bc52cff"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ace5edd6e67598456f1e067e56bc52cff"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Pixel</b> (unsigned char nr, unsigned char nv, unsigned char nb)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPixel.html#ace5edd6e67598456f1e067e56bc52cff">Pixel</a> (unsigned char nr, unsigned char nv, unsigned char nb)</td></tr>
+<tr class="memdesc:ace5edd6e67598456f1e067e56bc52cff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur de la classe (initialise r, g, b avec les paramètres) <br /></td></tr>
 <tr class="separator:ace5edd6e67598456f1e067e56bc52cff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a825a1e606a746602c4d309eb20e4e948"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a825a1e606a746602c4d309eb20e4e948"></a>
-unsigned char&#160;</td><td class="memItemRight" valign="bottom"><b>getRouge</b> () const </td></tr>
+unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPixel.html#a825a1e606a746602c4d309eb20e4e948">getRouge</a> () const </td></tr>
+<tr class="memdesc:a825a1e606a746602c4d309eb20e4e948"><td class="mdescLeft">&#160;</td><td class="mdescRight">Récupérer la composante Rouge. <br /></td></tr>
 <tr class="separator:a825a1e606a746602c4d309eb20e4e948"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f994177826a3b7543a0580bd7a0bf36"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7f994177826a3b7543a0580bd7a0bf36"></a>
-unsigned char&#160;</td><td class="memItemRight" valign="bottom"><b>getVert</b> () const </td></tr>
+unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPixel.html#a7f994177826a3b7543a0580bd7a0bf36">getVert</a> () const </td></tr>
+<tr class="memdesc:a7f994177826a3b7543a0580bd7a0bf36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Récupérer la composante Vert. <br /></td></tr>
 <tr class="separator:a7f994177826a3b7543a0580bd7a0bf36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a697482715837ed7a703e5ad955206d32"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a697482715837ed7a703e5ad955206d32"></a>
-unsigned char&#160;</td><td class="memItemRight" valign="bottom"><b>getBleu</b> () const </td></tr>
+unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPixel.html#a697482715837ed7a703e5ad955206d32">getBleu</a> () const </td></tr>
+<tr class="memdesc:a697482715837ed7a703e5ad955206d32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Récupérer la composante Bleu. <br /></td></tr>
 <tr class="separator:a697482715837ed7a703e5ad955206d32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46ffac40207a65c1481afcb2b156e433"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a46ffac40207a65c1481afcb2b156e433"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setRouge</b> (unsigned char nr)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPixel.html#a46ffac40207a65c1481afcb2b156e433">setRouge</a> (unsigned char nr)</td></tr>
+<tr class="memdesc:a46ffac40207a65c1481afcb2b156e433"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifie la composante Rouge. <br /></td></tr>
 <tr class="separator:a46ffac40207a65c1481afcb2b156e433"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3678479783c7c839ee653be96a7e0757"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3678479783c7c839ee653be96a7e0757"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setVert</b> (unsigned char nv)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPixel.html#a3678479783c7c839ee653be96a7e0757">setVert</a> (unsigned char nv)</td></tr>
+<tr class="memdesc:a3678479783c7c839ee653be96a7e0757"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifie la composante Vert. <br /></td></tr>
 <tr class="separator:a3678479783c7c839ee653be96a7e0757"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a706ee4cd16d1098fab21c727c90cb00b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a706ee4cd16d1098fab21c727c90cb00b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setBleu</b> (unsigned char nb)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPixel.html#a706ee4cd16d1098fab21c727c90cb00b">setBleu</a> (unsigned char nb)</td></tr>
+<tr class="memdesc:a706ee4cd16d1098fab21c727c90cb00b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifie la composante Bleu. <br /></td></tr>
 <tr class="separator:a706ee4cd16d1098fab21c727c90cb00b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
+<a class="anchor" id="a27ad99a2f705e635c42d242d530d4756"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Pixel::Pixel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>variables de pixel usigned char pour être compris entre 0 et 255 </p>
+<p>constructeur par défault </p>
+
+</div>
+</div>
 <hr/>La documentation de cette classe a été générée à partir des fichiers suivants :<ul>
 <li>src/<a class="el" href="Pixel_8h_source.html">Pixel.h</a></li>
 <li>src/Pixel.cpp</li>
@@ -142,7 +172,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setBleu</b> (unsigned
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classPixel.html">Pixel</a></li>
-    <li class="footer">Généré le Jeudi 9 Février 2017 15:00:20 pour My Project par
+    <li class="footer">Généré le Jeudi 16 Février 2017 13:35:08 pour My Project par
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

@@ -68,6 +68,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Liste&#160;des&#160;classes</span></a></li>
       <li><a href="classes.html"><span>Index&#160;des&#160;classes</span></a></li>
+      <li><a href="functions.html"><span>Membres&#160;de&#160;classe</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -90,7 +91,7 @@ $(document).ready(function(){initNavTree('classImage.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fonctions</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -101,6 +102,7 @@ $(document).ready(function(){initNavTree('classImage.html','');});
 
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Fonctions membres publiques</a> &#124;
 <a href="classImage-members.html">Liste de tous les membres</a>  </div>
   <div class="headertitle">
@@ -108,28 +110,47 @@ $(document).ready(function(){initNavTree('classImage.html','');});
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImage_1_1sdljeu.html">sdljeu</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
+<tr class="memitem:a58edd1c45b4faeb5f789b0d036d02313"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImage.html#a58edd1c45b4faeb5f789b0d036d02313">Image</a> ()</td></tr>
+<tr class="memdesc:a58edd1c45b4faeb5f789b0d036d02313"><td class="mdescLeft">&#160;</td><td class="mdescRight">variable de la classe image  <a href="#a58edd1c45b4faeb5f789b0d036d02313">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a58edd1c45b4faeb5f789b0d036d02313"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a781829417e05ac62d5c1ea090a8844d1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a781829417e05ac62d5c1ea090a8844d1"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Image</b> (unsigned int dimensionX, unsigned int dimensionY)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImage.html#a781829417e05ac62d5c1ea090a8844d1">Image</a> (unsigned int dimensionX, unsigned int dimensionY)</td></tr>
+<tr class="memdesc:a781829417e05ac62d5c1ea090a8844d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur de la classe : Initialise dimx et dimy. <br /></td></tr>
 <tr class="separator:a781829417e05ac62d5c1ea090a8844d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0294f63700543e11c0f0da85601c7ae5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0294f63700543e11c0f0da85601c7ae5"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImage.html#a0294f63700543e11c0f0da85601c7ae5">~Image</a> ()</td></tr>
+<tr class="memdesc:a0294f63700543e11c0f0da85601c7ae5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructeur de la classe. <br /></td></tr>
+<tr class="separator:a0294f63700543e11c0f0da85601c7ae5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e179663bdf144e852e4b116f1267df1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4e179663bdf144e852e4b116f1267df1"></a>
-<a class="el" href="classPixel.html">Pixel</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getPix</b> (unsigned int x, unsigned int y) const </td></tr>
+<a class="el" href="classPixel.html">Pixel</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImage.html#a4e179663bdf144e852e4b116f1267df1">getPix</a> (unsigned int x, unsigned int y) const </td></tr>
+<tr class="memdesc:a4e179663bdf144e852e4b116f1267df1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Récupérer le pixel aux coordonnées x,y. <br /></td></tr>
 <tr class="separator:a4e179663bdf144e852e4b116f1267df1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac52714350239da897272c87ce6f794ca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac52714350239da897272c87ce6f794ca"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setPix</b> (unsigned int x, unsigned int y, <a class="el" href="classPixel.html">Pixel</a> couleur)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImage.html#ac52714350239da897272c87ce6f794ca">setPix</a> (unsigned int x, unsigned int y, <a class="el" href="classPixel.html">Pixel</a> couleur)</td></tr>
+<tr class="memdesc:ac52714350239da897272c87ce6f794ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifier le pixel aux coordonnées x,y. <br /></td></tr>
 <tr class="separator:ac52714350239da897272c87ce6f794ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1aaaebd3616f1d2a89b4406afacc5d51"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1aaaebd3616f1d2a89b4406afacc5d51"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>dessinerRectangle</b> (unsigned int xmin, unsigned int ymin, unsigned int xmax, unsigned int ymax, <a class="el" href="classPixel.html">Pixel</a> couleur)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImage.html#a1aaaebd3616f1d2a89b4406afacc5d51">dessinerRectangle</a> (unsigned int xmin, unsigned int ymin, unsigned int xmax, unsigned int ymax, <a class="el" href="classPixel.html">Pixel</a> couleur)</td></tr>
+<tr class="memdesc:a1aaaebd3616f1d2a89b4406afacc5d51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dessiner un rectangle de couleur dans l'image. <br /></td></tr>
 <tr class="separator:a1aaaebd3616f1d2a89b4406afacc5d51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a62d0c277a049c0ea1da7ba2dd2131c31"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a62d0c277a049c0ea1da7ba2dd2131c31"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>effacer</b> (const <a class="el" href="classPixel.html">Pixel</a> &amp;couleur)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImage.html#a62d0c277a049c0ea1da7ba2dd2131c31">effacer</a> (const <a class="el" href="classPixel.html">Pixel</a> &amp;couleur)</td></tr>
+<tr class="memdesc:a62d0c277a049c0ea1da7ba2dd2131c31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Efface toute l'image et ne laisse que la couleur mise en paramètre. <br /></td></tr>
 <tr class="separator:a62d0c277a049c0ea1da7ba2dd2131c31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82ffef6c89927b0cc755a3fe2fec637b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a82ffef6c89927b0cc755a3fe2fec637b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>testRegression</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImage.html#a82ffef6c89927b0cc755a3fe2fec637b">testRegression</a> ()</td></tr>
+<tr class="memdesc:a82ffef6c89927b0cc755a3fe2fec637b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Effectue une série de tests vérifiant que le module fonctionne et que les données membres de l'objet sont conformes. <br /></td></tr>
 <tr class="separator:a82ffef6c89927b0cc755a3fe2fec637b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af60f90badc8cc9ea2491e84ff8e219d7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af60f90badc8cc9ea2491e84ff8e219d7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>sauver</b> (const string &amp;filename) const </td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImage.html#af60f90badc8cc9ea2491e84ff8e219d7">sauver</a> (const string &amp;filename) const </td></tr>
+<tr class="memdesc:af60f90badc8cc9ea2491e84ff8e219d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">permet de sauver l'image <br /></td></tr>
 <tr class="separator:af60f90badc8cc9ea2491e84ff8e219d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a504778b71d66c4da931cad497e2ec249"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a504778b71d66c4da931cad497e2ec249"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>ouvrir</b> (const string &amp;filename)</td></tr>
@@ -137,7 +158,29 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>ouvrir</b> (const str
 <tr class="memitem:aa3cc6f7401625c11dcd5ef003f37e4fa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa3cc6f7401625c11dcd5ef003f37e4fa"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>afficherConsole</b> ()</td></tr>
 <tr class="separator:aa3cc6f7401625c11dcd5ef003f37e4fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d957034ad17e3911a4d9f7decdda22c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4d957034ad17e3911a4d9f7decdda22c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>afficher</b> ()</td></tr>
+<tr class="separator:a4d957034ad17e3911a4d9f7decdda22c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
+<a class="anchor" id="a58edd1c45b4faeb5f789b0d036d02313"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Image::Image </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>variable de la classe image </p>
+<p>constructeur par défault </p>
+
+</div>
+</div>
 <hr/>La documentation de cette classe a été générée à partir des fichiers suivants :<ul>
 <li>src/<a class="el" href="Image_8h_source.html">Image.h</a></li>
 <li>src/Image.cpp</li>
@@ -148,7 +191,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>afficherConsole</b> (
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classImage.html">Image</a></li>
-    <li class="footer">Généré le Jeudi 9 Février 2017 15:00:20 pour My Project par
+    <li class="footer">Généré le Jeudi 16 Février 2017 13:35:08 pour My Project par
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

@@ -1,8 +1,10 @@
 var classImage =
 [
+    [ "sdljeu", "classImage_1_1sdljeu.html", null ],
     [ "Image", "classImage.html#a58edd1c45b4faeb5f789b0d036d02313", null ],
     [ "Image", "classImage.html#a781829417e05ac62d5c1ea090a8844d1", null ],
     [ "~Image", "classImage.html#a0294f63700543e11c0f0da85601c7ae5", null ],
+    [ "afficher", "classImage.html#a4d957034ad17e3911a4d9f7decdda22c", null ],
     [ "afficherConsole", "classImage.html#aa3cc6f7401625c11dcd5ef003f37e4fa", null ],
     [ "dessinerRectangle", "classImage.html#a1aaaebd3616f1d2a89b4406afacc5d51", null ],
     [ "effacer", "classImage.html#a62d0c277a049c0ea1da7ba2dd2131c31", null ],
