@@ -4,30 +4,54 @@ class Pixel {
 
 private : 	
 	unsigned char r, g, b; // Compris entre 0 et 255)
+/**
+	@brief variables de pixel usigned char pour être compris entre 0 et 255
+*/
 
 public : 
+/**
+	@brief constructeur par défault 
+*/
 	Pixel();	// Constructeur
 				// Le destructeur existe par defaut
-				
-	// Constructeur de la classe (initialise r, g, b avec les paramètres)
+
+/**
+	@brief  Constructeur de la classe (initialise r, g, b avec les paramètres)
+	@param nr nv nb :entier 
+*/
 	Pixel (	unsigned char nr, unsigned char nv, unsigned char nb);
-			
-	// Récupérer la composante Rouge 
+
+/**		
+	@brief Récupérer la composante Rouge 
+*/
 	unsigned char getRouge() const;
 	
-	// Récupérer la composante Vert
+/**	
+	@brief Récupérer la composante Vert
+*/
 	unsigned char getVert() const;
 	
-	// Récupérer la composante Bleu
+/**
+	@brief Récupérer la composante Bleu
+*/
 	unsigned char getBleu() const;
-	
-	// Modifie la composante Rouge
+
+/**
+	@brief Modifie la composante Rouge
+	@param nr : entier
+*/
 	void setRouge( unsigned char nr);
 	
-	// Modifie la composante Vert
+/**
+	@brief Modifie la composante Vert
+	@param nv : entier
+*/
 	void setVert( unsigned char nv);
 	
-	// Modifie la composante Bleu
+/**
+	 @brief Modifie la composante Bleu
+	@param nb : entier
+*/
 	void setBleu( unsigned char nb);	
 };
 

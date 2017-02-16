@@ -21,32 +21,60 @@ private :
 	SDL_Surface * surface;
 	SDL_Texture * texture;
 	bool has_changed;
+/** @brief variable de la classe image
+*/
 
 public :
-	Image();	// Constructeur par defaut
+/**
+	@brief constructeur par défault
+*/
+	Image();
 	
-	// Constructeur de la classe : Initialise dimx et dimy
+/**
+	@brief Constructeur de la classe : Initialise dimx et dimy
+	@param dimensionX dimensionY : entier
+*/
 	Image( unsigned int dimensionX, unsigned int dimensionY);
 	
-	// Destructeur de la classe
+/**
+	@brief Destructeur de la classe
+*/
 	~Image();
 	
-	// Récupérer le pixel aux coordonnées x,y
+/**
+	@brief Récupérer le pixel aux coordonnées x,y
+	@param x y : entier
+*/
 	Pixel & getPix( unsigned int x, unsigned int y) const;
 	
-	// Modifier le pixel aux coordonnées x,y
+/**
+	@brief Modifier le pixel aux coordonnées x,y
+	@param x y : entier et
+	@param couleur : Pixel
+*/
 	void setPix( unsigned int x, unsigned int y, Pixel couleur);
 	
-	// Dessiner un rectangle de couleur dans l'image
+/**
+	@brief Dessiner un rectangle de couleur dans l'image
+	@param xmin ymin xmax ymax : entier
+	@parma couleur : Pixel
+*/
 	void dessinerRectangle( unsigned int xmin, unsigned int ymin, unsigned int xmax, unsigned int ymax, Pixel couleur);
 	
-	// Efface toute l'image et ne laisse que la couleur mise en paramètre
+/**
+	@brief Efface toute l'image et ne laisse que la couleur mise en paramètre
+	@param couleur : Pixel
+*/
 	void effacer( const Pixel& couleur);
 	
-	// Effectue une série de tests vérifiant que le module fonctionne et
-	// que les données membres de l'objet sont conformes
+/**
+	@brief Effectue une série de tests vérifiant que le module fonctionne et que les données membres de l'objet sont conformes
+*/
 	void testRegression();
 	
+/**
+	@brief permet de sauver l'image
+*/
 	void sauver(const string & filename) const;
 	
 	void ouvrir(const string & filename);
