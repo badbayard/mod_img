@@ -21,60 +21,32 @@ private :
 	SDL_Surface * surface;
 	SDL_Texture * texture;
 	bool has_changed;
-/** @brief variable de la classe image
-*/
 
 public :
-/**
-	@brief constructeur par défault
-*/
-	Image();
+	Image();	// Constructeur par defaut
 	
-/**
-	@brief Constructeur de la classe : Initialise dimx et dimy
-	@param dimensionX dimensionY : entier
-*/
+	// Constructeur de la classe : Initialise dimx et dimy
 	Image( unsigned int dimensionX, unsigned int dimensionY);
 	
-/**
-	@brief Destructeur de la classe
-*/
+	// Destructeur de la classe
 	~Image();
 	
-/**
-	@brief Récupérer le pixel aux coordonnées x,y
-	@param x y : entier
-*/
+	// Récupérer le pixel aux coordonnées x,y
 	Pixel & getPix( unsigned int x, unsigned int y) const;
 	
-/**
-	@brief Modifier le pixel aux coordonnées x,y
-	@param x y : entier et
-	@param couleur : Pixel
-*/
+	// Modifier le pixel aux coordonnées x,y
 	void setPix( unsigned int x, unsigned int y, Pixel couleur);
 	
-/**
-	@brief Dessiner un rectangle de couleur dans l'image
-	@param xmin ymin xmax ymax : entier
-	@parma couleur : Pixel
-*/
+	// Dessiner un rectangle de couleur dans l'image
 	void dessinerRectangle( unsigned int xmin, unsigned int ymin, unsigned int xmax, unsigned int ymax, Pixel couleur);
 	
-/**
-	@brief Efface toute l'image et ne laisse que la couleur mise en paramètre
-	@param couleur : Pixel
-*/
+	// Efface toute l'image et ne laisse que la couleur mise en paramètre
 	void effacer( const Pixel& couleur);
 	
-/**
-	@brief Effectue une série de tests vérifiant que le module fonctionne et que les données membres de l'objet sont conformes
-*/
+	// Effectue une série de tests vérifiant que le module fonctionne et
+	// que les données membres de l'objet sont conformes
 	void testRegression();
 	
-/**
-	@brief permet de sauver l'image
-*/
 	void sauver(const string & filename) const;
 	
 	void ouvrir(const string & filename);
@@ -83,16 +55,22 @@ public :
 
 	void afficher();
 
-	class sdljeu {
-
-		private : 
-
-	SDL_Window *	afficherInit ();
-
-	};
-
-
-
 };
+
+/**
+ * la class qui gérent le jeu avec un affichage SDL
+ */
+class sdlJeu{
+	
+	private :
+
+		SDL_Window * window;
+		SDL_Renderer * renderer;
+		TTF_Font * font;
+
+		Image imcharge;
+	public : 
+	void	afficherInit();
+	};
 
 #endif

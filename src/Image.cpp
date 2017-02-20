@@ -203,3 +203,50 @@ void Image::afficherConsole(){
     }
 }
 
+void sdlJeu::afficherInit(){
+
+	int dimx =200;
+	int dimy =200;
+
+	if(SDL_Init(SDL_INIT_VIDEO) <0)
+	{
+		cout << "SDL ne c'est pas initialiser correctement " <<SDL_GetError()<<endl; 
+		SDL_Quit();
+		exit(1);
+	}
+	else
+	{
+		cout<< "SDL bien initialiser " << endl;
+	}
+
+	if(TTF_Init() != 0)
+	{
+		cout << "ERREUR dans SDL_ttf : " << SDL_GetError() << endl;
+		SDL_Quit();
+		exit(1);
+	}
+	else
+	{
+		cout <<" SDL_ttf marche bien " <<endl;
+	}
+
+	{
+		std::cout <<"SUCCES !! " <<endl ;
+	}
+
+
+	window = SDL_CreateWindow("Image",SDL_WINDOWPOS_CENTERED,SDL_WINDOWPOS_CENTERED,dimx, dimy,SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE);
+
+	if (window ==NULL)
+	{
+		cout << "Probleme lors de la creation de la fenetre : " << SDL_GetError() <<endl;
+		SDL_Quit();
+		exit(1);
+	}
+
+	
+}
+
+
+	
+

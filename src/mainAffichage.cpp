@@ -6,6 +6,7 @@ using namespace std;
 int main (int argc, char** argv) {
  
    Image image (10,10);
+sdlJeu sj;
  
    Pixel jaune (255, 255, 0);
    Pixel noir (0, 0, 0);
@@ -24,7 +25,8 @@ int main (int argc, char** argv) {
    image.setPix(1,8,noir);
    image.setPix(8,8,noir);
  
-   image.afficher(); 
+   //image.afficher();
+	sj.afficherInit();
  
    cout << "Appuyer sur entree pour quitter ";
    cin.get();
