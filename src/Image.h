@@ -67,6 +67,8 @@ class sdlJeu{
 		SDL_Window * window;
 		SDL_Renderer * renderer;
 		TTF_Font * font;
+		SDL_Surface * image;
+		SDL_Texture* monimage;
 
 		Image imcharge;
 	public : 
