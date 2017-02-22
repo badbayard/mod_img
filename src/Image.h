@@ -71,7 +71,7 @@ class sdlJeu{
 		SDL_Texture* monimage;
 
 		Image imcharge;
-	public : 
+	public :	
 	void	afficherInit();
 	};
 

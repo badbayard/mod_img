@@ -203,12 +203,23 @@ void Image::afficherConsole(){
     }
 }
 
+/*
+sdlJeu::sdlJeu () {
+	window = NULL;
+	renderer = NULL;
+	font = NULL ;
+	image = NULL;
+	monimage = NULL;
+
+}
+*/
 void sdlJeu::afficherInit(){
 
 	int dimx =200;
 	int dimy =200;
 
-	if(SDL_Init(SDL_INIT_VIDEO) <0)
+
+	if(SDL_VideoInit(NULL) <0)
 	{
 		cout << "SDL ne c'est pas initialiser correctement " <<SDL_GetError()<<endl; 
 		SDL_Quit();
@@ -234,42 +245,43 @@ void sdlJeu::afficherInit(){
 		std::cout <<"SUCCES !! " <<endl ;
 	}
 
-	if (window ==NULL)
+	/**
+	 * chargement des images
+	 */
+
+  image = IMG_Load("data/image1.ppm");
+
+	if(!image)
+	{
+		cout <<"Erreur de chargement de l'image " <<endl;
+		cout << IMG_GetError()<<" <----  c'est l'erreur de l'image ici "<<endl;
+		//exit(1);
+	}
+
+	window = SDL_CreateWindow("Image",SDL_WINDOWPOS_CENTERED,SDL_WINDOWPOS_CENTERED,dimx, dimy,SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE);
+
+		if (window ==NULL)
 	{
 		cout << "Probleme lors de la creation de la fenetre : " << SDL_GetError() <<endl;
 		SDL_Quit();
 		exit(1);
 	}
 
-	/**
-	 * chargement des images
-	 */
-
-  image = IMG_Load("data/image2.ppm");
-
-	window = SDL_CreateWindow("Image",SDL_WINDOWPOS_CENTERED,SDL_WINDOWPOS_CENTERED,dimx, dimy,SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE);
-
 	renderer = SDL_CreateRenderer (window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
 
-	monimage = SDL_CreateTextureFromSurface(renderer,image);
-
-	
-
-	//gestion des erreurs
-	
-	if (renderer == NULL)
+		if (renderer == NULL)
 	{
 		cout <<"Erreur lors de la creation du render" << endl;
 		cout << SDL_GetError();
 		return exit(1);
 	}
-	
-	if(!image)
+	else
 	{
-		cout <<"Erreur de chargement de l'image " <<endl;
-		cout << SDL_GetError();
-		exit(1);
+		cout << "Succee de la creation du render " <<endl;
 	}
+
+	monimage = SDL_CreateTextureFromSurface(renderer,image);
+
 	SDL_Delay(3000); // en ms pas en seconde 
 	SDL_DestroyRenderer (renderer);
 	SDL_DestroyWindow(window);
