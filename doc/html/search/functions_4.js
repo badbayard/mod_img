@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pixel',['Pixel',['../classPixel.html#a27ad99a2f705e635c42d242d530d4756',1,'Pixel::Pixel()'],['../classPixel.html#ace5edd6e67598456f1e067e56bc52cff',1,'Pixel::Pixel(unsigned char nr, unsigned char nv, unsigned char nb)']]]
+  ['image',['Image',['../classImage.html#a58edd1c45b4faeb5f789b0d036d02313',1,'Image::Image()'],['../classImage.html#a781829417e05ac62d5c1ea090a8844d1',1,'Image::Image(unsigned int dimensionX, unsigned int dimensionY)']]]
 ];

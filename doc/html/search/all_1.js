@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['effacer',['effacer',['../classImage.html#a62d0c277a049c0ea1da7ba2dd2131c31',1,'Image']]]
+  ['dessinerrectangle',['dessinerRectangle',['../classImage.html#a1aaaebd3616f1d2a89b4406afacc5d51',1,'Image']]]
 ];

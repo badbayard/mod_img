@@ -1,6 +1,5 @@
 var classImage =
 [
-    [ "sdljeu", "classImage_1_1sdljeu.html", null ],
     [ "Image", "classImage.html#a58edd1c45b4faeb5f789b0d036d02313", null ],
     [ "Image", "classImage.html#a781829417e05ac62d5c1ea090a8844d1", null ],
     [ "~Image", "classImage.html#a0294f63700543e11c0f0da85601c7ae5", null ],
