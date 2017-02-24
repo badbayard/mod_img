@@ -26,6 +26,7 @@ private :
 	SDL_Texture * texture;
 	bool has_changed;
 	SDL_Window * window;
+	int window_dimx, window_dimy;
 	SDL_Renderer * renderer;
 	TTF_Font * font;
 	SDL_Surface * image;

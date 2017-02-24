@@ -204,15 +204,15 @@ void Image::afficherConsole(){
 }
 
 
-void Image::afficherInit(){
+void Image::afficherInit() {
 
-	int dimx =200;
-	int dimy =200;
+	window_dimx = 200;
+	window_dimy = 200;
 
 
-	if(SDL_VideoInit(NULL) <0)
+	if(SDL_VideoInit(NULL) < 0)
 	{
-		cout << "SDL ne s'est pas initialise correctement " <<SDL_GetError()<<endl; 
+		cout << "SDL ne s'est pas initialise correctement " << SDL_GetError() << endl; 
 		SDL_Quit();
 		exit(1);
 	}
@@ -229,11 +229,11 @@ void Image::afficherInit(){
 	}
 	else
 	{
-		cout <<" SDL_ttf marche bien " <<endl;
+		cout << " SDL_ttf marche bien " << endl;
 	}
 
 	{
-		std::cout <<"SUCCES !! " <<endl ;
+		std::cout << "SUCCES !! " << endl;
 	}
 
 	/**
@@ -246,14 +246,14 @@ void Image::afficherInit(){
 
 	if(!image)
 	{
-		cout <<"Erreur de chargement de l'image " <<endl;
-		cout << IMG_GetError()<<" <----  c'est l'erreur de l'image ici "<<endl;
+		cout << "Erreur de chargement de l'image " << endl;
+		cout << IMG_GetError()<<" <----  c'est l'erreur de l'image ici " << endl;
 		//exit(1);
 	}
 	else 
-		cout << "Chargement de l'image reussi" <<endl;
+		cout << "Chargement de l'image reussi" << endl;
 
-	window = SDL_CreateWindow("Image",SDL_WINDOWPOS_CENTERED,SDL_WINDOWPOS_CENTERED,dimx, dimy,SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE);
+	window = SDL_CreateWindow("Image",SDL_WINDOWPOS_CENTERED,SDL_WINDOWPOS_CENTERED,window_dimx,window_dimy,SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE);
 
 		if (window ==NULL)
 	{
@@ -272,7 +272,7 @@ void Image::afficherInit(){
 	}
 	else
 	{
-		cout << "Succes de la creation du render " <<endl;
+		cout << "Succes de la creation du render " << endl;
 	}
 
 	monimage = SDL_CreateTextureFromSurface(renderer,image);
@@ -280,30 +280,44 @@ void Image::afficherInit(){
 	SDL_Rect r;
 	r.x = 0;
 	r.y = 0;
-	r.w = dimx;
-	r.h = dimy;
+	r.w = window_dimx;
+	r.h = window_dimy;
 	
 	SDL_RenderCopy(renderer,monimage,NULL,&r);
 	SDL_RenderPresent(renderer);
-
-
 }
 
-void Image::afficherDetruit(){
+void Image::afficherBoucle() {
+	SDL_Event event;
+	bool continuer = true;
 	
-		SDL_DestroyRenderer (renderer);
-		SDL_DestroyWindow(window);
-		SDL_Quit();
+	while (continuer) {
+		SDL_WaitEvent(&event);
+		switch (event.type) {
+			case SDL_QUIT:
+				continuer = false;
+				break;
+			case SDL_KEYDOWN:
+				switch (event.key.keysym.sym) {
+					case SDLK_ESCAPE:
+						continuer = false;
+						break;
+				}
+				break;
+		}
+	}
+}
+
+void Image::afficherDetruit() {
+	SDL_DestroyRenderer(renderer);
+	SDL_DestroyWindow(window);
+	SDL_Quit();
 }
 
 
 void Image::afficher(){
 	afficherInit();
-	while(1) {
-		if (cin.get() == 'q') {
-			afficherDetruit();
-			exit(1);
-			}
-	}
+	afficherBoucle();
+	afficherDetruit();
 }
 
