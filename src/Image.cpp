@@ -221,13 +221,13 @@ void Image::afficherInit(){
 
 	if(SDL_VideoInit(NULL) <0)
 	{
-		cout << "SDL ne c'est pas initialiser correctement " <<SDL_GetError()<<endl; 
+		cout << "SDL ne s'est pas initialise correctement " <<SDL_GetError()<<endl; 
 		SDL_Quit();
 		exit(1);
 	}
 	else
 	{
-		cout<< "SDL bien initialiser " << endl;
+		cout<< "SDL bien initialise " << endl;
 	}
 
 	if(TTF_Init() != 0)
@@ -248,8 +248,10 @@ void Image::afficherInit(){
 	/**
 	 * chargement des images
 	 */
-
-  image = IMG_Load("../data/image1.ppm");
+	
+	sauver("../data/image_aff.ppm");
+	
+  	image = IMG_Load("../data/image_aff.ppm");
 
 	if(!image)
 	{
@@ -269,7 +271,7 @@ void Image::afficherInit(){
 		exit(1);
 	}
 
-	renderer = SDL_CreateRenderer (window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
+	renderer = SDL_CreateRenderer (window, -1, SDL_RENDERER_ACCELERATED);
 
 		if (renderer == NULL)
 	{
@@ -279,19 +281,46 @@ void Image::afficherInit(){
 	}
 	else
 	{
-		cout << "Succee de la creation du render " <<endl;
+		cout << "Succes de la creation du render " <<endl;
 	}
 
 	monimage = SDL_CreateTextureFromSurface(renderer,image);
+	
+//	draw(renderer, 1,1, dimx, dimy);
+	SDL_Rect r;
+	r.x = 0;
+	r.y = 0;
+	r.w = dimx;
+	r.h = dimy;
+	
+	SDL_RenderCopy(renderer,monimage,NULL,&r);
+	SDL_RenderPresent(renderer);
 
-	SDL_Delay(3000); // en ms pas en seconde 
+/*	SDL_Delay(3000); // en ms pas en seconde 
 	SDL_DestroyRenderer (renderer);
 	SDL_DestroyWindow(window);
-	SDL_Quit();
+	SDL_Quit();*/
 }
 
 void Image::afficher(){
 	afficherInit();
 }
-	
 
+/*void Image::draw (SDL_Renderer * renderer, int x, int y, int w, int h) {
+    int ok;
+    SDL_Rect r;
+    r.x = x;
+    r.y = y;
+    r.w = (w<0)?surface->w:w;
+    r.h = (h<0)?surface->h:h;
+
+    if (has_changed) {
+        ok = SDL_UpdateTexture(texture,NULL,surface->pixels,surface->pitch);
+        assert(ok == 0);
+        has_changed = false;
+    }
+
+    ok = SDL_RenderCopy(renderer,texture,NULL,&r);
+    assert(ok == 0);
+}
+*/

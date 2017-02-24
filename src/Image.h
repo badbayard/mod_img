@@ -31,6 +31,7 @@ private :
 	void	afficherInit();
 	void 	afficherBoucle();
 	void 	afficherDetruit();
+	void 	draw (SDL_Renderer * renderer, int x, int y, int w, int h);
 
 public :
 	Image();	// Constructeur par defaut
