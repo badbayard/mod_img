@@ -203,16 +203,7 @@ void Image::afficherConsole(){
     }
 }
 
-/*
-sdlJeu::sdlJeu () {
-	window = NULL;
-	renderer = NULL;
-	font = NULL ;
-	image = NULL;
-	monimage = NULL;
 
-}
-*/
 void Image::afficherInit(){
 
 	int dimx =200;
@@ -260,9 +251,9 @@ void Image::afficherInit(){
 		//exit(1);
 	}
 	else 
-		cout << "Image reussi, tu es le king " <<endl;
+		cout << "Chargement de l'image reussi" <<endl;
 
-	window = SDL_CreateWindow("Image",SDL_WINDOWPOS_CENTERED,SDL_WINDOWPOS_CENTERED,dimx, dimy,SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE);
+	window = SDL_CreateWindow("Image",SDL_WINDOWPOS_CENTERED,SDL_WINDOWPOS_CENTERED,dimx*5, dimy*5,SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE);
 
 		if (window ==NULL)
 	{
@@ -286,7 +277,6 @@ void Image::afficherInit(){
 
 	monimage = SDL_CreateTextureFromSurface(renderer,image);
 	
-//	draw(renderer, 1,1, dimx, dimy);
 	SDL_Rect r;
 	r.x = 0;
 	r.y = 0;
@@ -296,31 +286,24 @@ void Image::afficherInit(){
 	SDL_RenderCopy(renderer,monimage,NULL,&r);
 	SDL_RenderPresent(renderer);
 
-/*	SDL_Delay(3000); // en ms pas en seconde 
-	SDL_DestroyRenderer (renderer);
-	SDL_DestroyWindow(window);
-	SDL_Quit();*/
+
 }
+
+void Image::afficherDetruit(){
+	
+		SDL_DestroyRenderer (renderer);
+		SDL_DestroyWindow(window);
+		SDL_Quit();
+}
+
 
 void Image::afficher(){
 	afficherInit();
+	while(1) {
+		if (cin.get() == 'q') {
+			afficherDetruit();
+			exit(1);
+			}
+	}
 }
 
-/*void Image::draw (SDL_Renderer * renderer, int x, int y, int w, int h) {
-    int ok;
-    SDL_Rect r;
-    r.x = x;
-    r.y = y;
-    r.w = (w<0)?surface->w:w;
-    r.h = (h<0)?surface->h:h;
-
-    if (has_changed) {
-        ok = SDL_UpdateTexture(texture,NULL,surface->pixels,surface->pitch);
-        assert(ok == 0);
-        has_changed = false;
-    }
-
-    ok = SDL_RenderCopy(renderer,texture,NULL,&r);
-    assert(ok == 0);
-}
-*/

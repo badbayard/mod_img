@@ -1,43 +1,3 @@
-/*#include "Image.h"
-#include <iostream>
-#include <stdlib.h>
-using namespace std;
-
-
-int main ()
-{
-	Pixel pix(128,0,128);
-	Image photo;
-	
-	cout <<endl;
-	
-	cout << " Il y a : " << (int) pix.getRouge() << " en Rouge !" << endl;
-	cout << " Il y a : " << (int) pix.getVert() << " en Vert !" << endl;
-	cout << " Il y a : " << (int) pix.getBleu() << " en Bleu !" << endl;
-	
-	pix.setRouge(32);
-	pix.setVert(142);
-	pix.setBleu(22);
-	
-	cout << endl << " Et après un petit changement : " << endl << endl;
-	
-	cout << " Il y a : " << (int) pix.getRouge() << " en Rouge !" << endl;
-	cout << " Il y a : " << (int) pix.getVert() << " en Vert !" << endl;
-	cout << " Il y a : " << (int) pix.getBleu() << " en Bleu !" << endl;
-	
-
-cout << endl;
-return 0;
-}
-
-
-int main() {
-   Image monImage(5,5);
-   monImage.testRegression();
-   cout << "Appuyer sur entree pour quitter "; cin.get();
-   return 0;
-}*/
-
 #include "Image.h"
 #include "Pixel.h"
 #include <iostream>
@@ -67,3 +27,34 @@ int main() {
  
    return 0;    
 }
+
+
+
+
+/*
+int main ()
+{
+	Pixel pix(128,0,128);
+	Image photo;
+	
+	cout <<endl;
+	
+	cout << " Il y a : " << (int) pix.getRouge() << " en Rouge !" << endl;
+	cout << " Il y a : " << (int) pix.getVert() << " en Vert !" << endl;
+	cout << " Il y a : " << (int) pix.getBleu() << " en Bleu !" << endl;
+	
+	pix.setRouge(32);
+	pix.setVert(142);
+	pix.setBleu(22);
+	
+	cout << endl << " Et après un petit changement : " << endl << endl;
+	
+	cout << " Il y a : " << (int) pix.getRouge() << " en Rouge !" << endl;
+	cout << " Il y a : " << (int) pix.getVert() << " en Vert !" << endl;
+	cout << " Il y a : " << (int) pix.getBleu() << " en Bleu !" << endl;
+	
+
+cout << endl;
+return 0;
+
+}*/

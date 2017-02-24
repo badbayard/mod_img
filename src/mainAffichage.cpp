@@ -25,7 +25,6 @@ int main (int argc, char** argv) {
    image.setPix(1,8,noir);
    image.setPix(8,8,noir);
  
-   //image.afficher();
 	image.afficher();
  
    cout << "Appuyer sur entree pour quitter ";

@@ -3,16 +3,16 @@ FLAGS = -g -Wall -c
 INCLUDE_DIR_SDL = -I/usr/include/SDL2
 LIBS_SDL = -lSDL2 -lSDL2_ttf -lSDL2_image
 
-all : bin/Exec.out bin/ExecSDL.out bin/Exectest.out
+all : bin/exemple bin/affichage bin/test
 
-bin/Exec.out : obj/Image.o obj/Pixel.o obj/main.o
-	$(CC) $(INCLUDE_DIR_SDL) obj/Image.o obj/Pixel.o obj/main.o -o bin/Exec.out $(LIBS_SDL)
+bin/exemple : obj/Image.o obj/Pixel.o obj/main.o
+	$(CC) $(INCLUDE_DIR_SDL) obj/Image.o obj/Pixel.o obj/main.o -o bin/exemple $(LIBS_SDL)
 
-bin/ExecSDL.out : obj/Image.o obj/Pixel.o obj/mainAffichage.o
-	$(CC) $(INCLUDE_DIR_SDL) obj/Image.o obj/Pixel.o obj/mainAffichage.o -o bin/ExecSDL.out $(LIBS_SDL)
+bin/affichage : obj/Image.o obj/Pixel.o obj/mainAffichage.o
+	$(CC) $(INCLUDE_DIR_SDL) obj/Image.o obj/Pixel.o obj/mainAffichage.o -o bin/affichage $(LIBS_SDL)
 
-bin/Exectest.out : obj/Image.o obj/Pixel.o obj/mainTest.o
-	$(CC) $(INCLUDE_DIR_SDL) obj/Image.o obj/Pixel.o obj/mainTest.o -o bin/Exectest.out $(LIBS_SDL)
+bin/test : obj/Image.o obj/Pixel.o obj/mainTest.o
+	$(CC) $(INCLUDE_DIR_SDL) obj/Image.o obj/Pixel.o obj/mainTest.o -o bin/test $(LIBS_SDL)
 
 obj/main.o : src/Image.h src/Pixel.h src/main.cpp
 	$(CC) $(FLAGS) $(INCLUDE_DIR_SDL) src/main.cpp -o obj/main.o $(LIBS_SDL)

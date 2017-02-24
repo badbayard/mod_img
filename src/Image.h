@@ -15,80 +15,74 @@ using namespace std;
 
 class Image {
 
-private :	
+private :
+	/** @brief Tableau de pixels */	
 	Pixel* tab;
+	/** @brief Dimension de l'image */
 	unsigned int dimx, dimy;
+	
+	/** Variable pour la gestion de la SDL  */
 	SDL_Surface * surface;
 	SDL_Texture * texture;
 	bool has_changed;
-	
-		SDL_Window * window;
-		SDL_Renderer * renderer;
-		TTF_Font * font;
-		SDL_Surface * image;
-		SDL_Texture* monimage;
+	SDL_Window * window;
+	SDL_Renderer * renderer;
+	TTF_Font * font;
+	SDL_Surface * image;
+	SDL_Texture* monimage;
 				
+	/** Fonction pour l'affichage SDL*/
+	/** @brief Affiche l'image du programme principal */		
 	void	afficherInit();
+	/** @brief Gestion des événements de la fenêtre */
 	void 	afficherBoucle();
+	/** @brief Destruction de la fenêtre */
 	void 	afficherDetruit();
-	void 	draw (SDL_Renderer * renderer, int x, int y, int w, int h);
 
 public :
-	Image();	// Constructeur par defaut
+	/** @brief Constructeur par défaut */
+	Image();
 	
-	// Constructeur de la classe : Initialise dimx et dimy
+	/** @brief Constructeur de la classe 
+		@param dimensionX dimensionY :entier */
 	Image( unsigned int dimensionX, unsigned int dimensionY);
 	
-	// Destructeur de la classe
+	/** @brief Destructeur de la classe */
 	~Image();
 	
-	// Récupérer le pixel aux coordonnées x,y
+	/** @brief Récupére le pixel aux coordonnées x,y 
+		@param x y :entier */
 	Pixel & getPix( unsigned int x, unsigned int y) const;
 	
-	// Modifier le pixel aux coordonnées x,y
+	/** @brief Modifie le pixel aux coordonnées x,y
+		@param x y :entier */
 	void setPix( unsigned int x, unsigned int y, Pixel couleur);
 	
-	// Dessiner un rectangle de couleur dans l'image
+	/** @brief Dessine un rectangle de couleur entre des coordonnées minimum et maximum
+		@param xmin ymin xmax ymax :entier
+		@param couleur :Pixel */
 	void dessinerRectangle( unsigned int xmin, unsigned int ymin, unsigned int xmax, unsigned int ymax, Pixel couleur);
 	
-	// Efface toute l'image et ne laisse que la couleur mise en paramètre
+	/** @brief Efface toute l'image et ne laisse que la couleur mise en paramètre
+		@param couleur :Pixel */
 	void effacer( const Pixel& couleur);
 	
-	// Effectue une série de tests vérifiant que le module fonctionne et
-	// que les données membres de l'objet sont conformes
+	/** @brief Effectue une série de tests vérifiant que le module fonctionne et que les données membres de l'objet sont conformes */
 	void testRegression();
 	
+	/** @brief Enregistre l'image grâce au chemin passé en paramètre (chemin/nom_image) 
+		@param filename :chaine de caractères */
 	void sauver(const string & filename) const;
 	
+	/** @brief Ouvre l'image grâce au chemin passé en paramètre (chemin/nom_image) 
+		@param filename :chaine de caractères */
 	void ouvrir(const string & filename);
 	
 	void afficherConsole();
 
+	/** @brief Appelle les 3 fonctions privées pour l'affichage */
 	void afficher();
 
 };
 
-/**
- * la class qui gérent le jeu avec un affichage SDL
- 
-class sdlJeu{
-	
-	private :
-
-		SDL_Window * window;
-		SDL_Renderer * renderer;
-		TTF_Font * font;
-		SDL_Surface * image;
-		SDL_Texture* monimage;
-
-		Image imcharge;
-				
-	void	afficherInit();
-	void 	afficherBoucle();
-	void 	afficherDetruit();
-	public :
-	void afficher();
-
-	};
-*/
 #endif
