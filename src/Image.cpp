@@ -213,7 +213,7 @@ sdlJeu::sdlJeu () {
 
 }
 */
-void sdlJeu::afficherInit(){
+void Image::afficherInit(){
 
 	int dimx =200;
 	int dimy =200;
@@ -249,7 +249,7 @@ void sdlJeu::afficherInit(){
 	 * chargement des images
 	 */
 
-  image = IMG_Load("data/image1.ppm");
+  image = IMG_Load("../data/image1.ppm");
 
 	if(!image)
 	{
@@ -257,6 +257,8 @@ void sdlJeu::afficherInit(){
 		cout << IMG_GetError()<<" <----  c'est l'erreur de l'image ici "<<endl;
 		//exit(1);
 	}
+	else 
+		cout << "Image reussi, tu es le king " <<endl;
 
 	window = SDL_CreateWindow("Image",SDL_WINDOWPOS_CENTERED,SDL_WINDOWPOS_CENTERED,dimx, dimy,SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE);
 
@@ -288,6 +290,8 @@ void sdlJeu::afficherInit(){
 	SDL_Quit();
 }
 
-
+void Image::afficher(){
+	afficherInit();
+}
 	
 

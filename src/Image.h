@@ -21,6 +21,16 @@ private :
 	SDL_Surface * surface;
 	SDL_Texture * texture;
 	bool has_changed;
+	
+		SDL_Window * window;
+		SDL_Renderer * renderer;
+		TTF_Font * font;
+		SDL_Surface * image;
+		SDL_Texture* monimage;
+				
+	void	afficherInit();
+	void 	afficherBoucle();
+	void 	afficherDetruit();
 
 public :
 	Image();	// Constructeur par defaut
@@ -59,7 +69,7 @@ public :
 
 /**
  * la class qui gérent le jeu avec un affichage SDL
- */
+ 
 class sdlJeu{
 	
 	private :
@@ -71,8 +81,13 @@ class sdlJeu{
 		SDL_Texture* monimage;
 
 		Image imcharge;
-	public :	
+				
 	void	afficherInit();
-	};
+	void 	afficherBoucle();
+	void 	afficherDetruit();
+	public :
+	void afficher();
 
+	};
+*/
 #endif
