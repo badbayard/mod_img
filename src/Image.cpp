@@ -253,7 +253,7 @@ void Image::afficherInit(){
 	else 
 		cout << "Chargement de l'image reussi" <<endl;
 
-	window = SDL_CreateWindow("Image",SDL_WINDOWPOS_CENTERED,SDL_WINDOWPOS_CENTERED,dimx*5, dimy*5,SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE);
+	window = SDL_CreateWindow("Image",SDL_WINDOWPOS_CENTERED,SDL_WINDOWPOS_CENTERED,dimx, dimy,SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE);
 
 		if (window ==NULL)
 	{
