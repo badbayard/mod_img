@@ -30,11 +30,12 @@ private :
 	SDL_Renderer * renderer;
 	TTF_Font * font;
 	SDL_Surface * image;
-	SDL_Texture* monimage;
+	SDL_Texture * monimage;
+	SDL_Rect r;
 				
 	/** Fonction pour l'affichage SDL*/
 	/** @brief Affiche l'image du programme principal */		
-	void	afficherInit();
+	void	afficherInit(int init_win_x, int init_win_y);
 	/** @brief Gestion des événements de la fenêtre */
 	void 	afficherBoucle();
 	/** @brief Destruction de la fenêtre */
